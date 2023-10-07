@@ -190,6 +190,9 @@ def mat_modify(matrix):
                 print("Index out of range!")
                 continue
             coeff = prompt_fraction("Scale: ")
+            if coeff == 0:
+                print("You cannot scale by 0!")
+                continue
             for c in range(len(matrix[row])):
                 matrix[row][c] *= coeff
             print("Done!")
